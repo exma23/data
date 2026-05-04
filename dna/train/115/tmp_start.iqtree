@@ -1,0 +1,123 @@
+IQ-TREE 3.1.1 built Apr  8 2026
+
+Input file name: data/dna/train/115/data.phy
+Type of analysis: tree reconstruction
+Random seed number: 819525
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+SEQUENCE ALIGNMENT
+------------------
+
+NOTE: Alignment sequence type is auto-detected. If in doubt, specify it via -st option.
+Input data: 7 sequences with 4401 nucleotide sites
+Number of constant sites: 2571 (= 58.4185% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 2571 (= 58.4185% of all sites)
+Number of parsimony informative sites: 513
+Number of distinct site patterns: 1010
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.0153
+  A-G: 0.9779
+  A-T: 0.9484
+  C-G: 0.9709
+  C-T: 0.9204
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3089
+  pi(C) = 0.1886
+  pi(G) = 0.1806
+  pi(T) = 0.3219
+
+Rate matrix Q:
+
+  A   -0.9481    0.2696    0.2487    0.4298
+  C    0.4417    -1.106    0.2469    0.4172
+  G    0.4254    0.2578    -1.136    0.4533
+  T    0.4125    0.2444    0.2543   -0.9112
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.1945
+Gamma shape alpha: 2.248
+
+ Category  Relative_rate  Proportion
+  0         0              0.1945
+  1         0.3987         0.2014
+  2         0.843          0.2014
+  3         1.335          0.2014
+  4         2.39           0.2014
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -17448.3955 (s.e. 191.2532)
+Unconstrained log-likelihood (without tree): -22473.0902
+Number of free parameters (#branches + #model parameters): 21
+Akaike information criterion (AIC) score: 34938.7910
+Corrected Akaike information criterion (AICc) score: 34939.0020
+Bayesian information criterion (BIC) score: 35072.9723
+
+Total tree length (sum of branch lengths): 0.9143
+Sum of internal branch lengths: 0.0884 (9.6636% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
+
++-------------------T2
+|
++----------------------T7
+|
+|  +--------------------T5
++--|
+   |       +--T3
+   |    +--|
+   |    |  +-------------------------------------------------T4
+   +----|
+        |   +--T1
+        +---|
+            +------------T6
+
+Tree in newick format:
+
+(T2:0.1272604893,T7:0.1462441426,(T5:0.1330859665,((T3:0.0134420830,T4:0.3115462778):0.0240105615,(T1:0.0124719267,T6:0.0819086121):0.0301841910):0.0314515838):0.0027096694);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data/dna/train/115/tmp_start.treefile -m "GTR{1.01533,0.977926,0.948361,0.970877,0.920392}+F{0.308932,0.188581,0.1806,0.321887}+I{0.194502}+G4{2.24758}" --length 4401
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data/dna/train/115/data.phy --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data/dna/train/115/data.phy --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Sun May  3 03:47:56 2026
+Total CPU time used: 1190.67 seconds (0h:19m:50s)
+Total wall-clock time used: 10.5614 seconds (0h:0m:10s)
+

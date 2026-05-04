@@ -1,0 +1,133 @@
+IQ-TREE 3.1.1 built Apr  8 2026
+
+Input file name: data_forth/dna/train/4/data.phy
+Type of analysis: tree reconstruction
+Random seed number: 583089
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+SEQUENCE ALIGNMENT
+------------------
+
+NOTE: Alignment sequence type is auto-detected. If in doubt, specify it via -st option.
+Input data: 12 sequences with 6130 nucleotide sites
+Number of constant sites: 2941 (= 47.9772% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 2941 (= 47.9772% of all sites)
+Number of parsimony informative sites: 2115
+Number of distinct site patterns: 2946
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+G4
+
+Rate parameter R:
+
+  A-C: 0.9613
+  A-G: 0.9381
+  A-T: 1.0363
+  C-G: 1.0000
+  C-T: 1.0004
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.438
+  pi(C) = 0.1849
+  pi(G) = 0.1758
+  pi(T) = 0.2013
+
+Rate matrix Q:
+
+  A   -0.7952    0.2564    0.2379    0.3009
+  C    0.6075    -1.152    0.2536    0.2905
+  G    0.5928    0.2667     -1.15    0.2904
+  T    0.6549    0.2668    0.2536    -1.175
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 1.002e-06
+Gamma shape alpha: 0.9407
+
+ Category  Relative_rate  Proportion
+  0         0              1.002e-06
+  1         0.125          0.25
+  2         0.4582         0.25
+  3         0.9894         0.25
+  4         2.427          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -34516.5166 (s.e. 351.8136)
+Unconstrained log-likelihood (without tree): -41994.4697
+Number of free parameters (#branches + #model parameters): 31
+Akaike information criterion (AIC) score: 69095.0332
+Corrected Akaike information criterion (AICc) score: 69095.3586
+Bayesian information criterion (BIC) score: 69303.3827
+
+Total tree length (sum of branch lengths): 2.4011
+Sum of internal branch lengths: 0.9573 (39.8690% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
+
++--T2
+|
+|      +--T7
++------|
+|      |    +--T9
+|      +----|
+|           +--T11
+|
+|     +--T6
+|  +--|
+|  |  +------------------------T8
++--|
+   |                         +--T3
+   |               +---------|
+   |               |         |  +-----------------------------T12
+   |               |         +--|
+   |               |            +----T5
+   +---------------|
+                   |    +------T4
+                   +----|
+                        |        +--T1
+                        +--------|
+                                 +----T10
+
+Tree in newick format:
+
+(T2:0.0554451566,(T7:0.0047482974,(T9:0.0293682143,T11:0.0589780780):0.0872493772):0.1134908094,((T6:0.0155403390,T8:0.4130783591):0.0411722212,((T3:0.0489730564,(T12:0.4852179042,T5:0.0812232943):0.0027484703):0.1653277095,(T4:0.1219982015,(T1:0.0353078287,T10:0.0939112253):0.1456121603):0.0892326849):0.2625094022):0.0499402229);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data_forth/dna/train/4/tmp_start.treefile -m "GTR{0.961299,0.938077,1.03628,0.999984,1.00037}+F{0.438046,0.184889,0.175796,0.201269}+I{1.0022e-06}+G4{0.940721}" --length 6130
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data_forth/dna/train/4/data.phy --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data_forth/dna/train/4/data.phy --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Sun May  3 13:51:22 2026
+Total CPU time used: 397.797 seconds (0h:6m:37s)
+Total wall-clock time used: 12.7737 seconds (0h:0m:12s)
+
