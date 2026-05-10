@@ -1,0 +1,98 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+
+RAxML-NG was called at 05-May-2026 03:02:37 as follows:
+
+raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/415/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/415/start.newick --model GTR{0.9140/0.8966/0.9408/0.9161/0.9903/1.0000}+I{9.514e-07}+G{1.013}+F{0.2517/0.2332/0.25/0.2651} --prefix precompute/415/415_infer --threads auto --seed 42 --force perf_threads
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): user
+  random seed: 42
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in FORCE mode: some safety checks are disabled!
+
+[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/415/data.phy
+[00:00:00] Loaded alignment with 15 taxa and 6127 sites
+
+WARNING: Fully undetermined columns found: 43
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/415/415_infer.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 3054 patterns
+
+Partition 0: noname
+Model: GTR{0.914/0.8966/0.9408/0.9161/0.9903/1}+FU{0.2517/0.2332/0.25/0.2651}+IU{9.514e-07}+G4m{1.013}
+Alignment sites / patterns: 6084 / 3054
+Gaps: 25.41 %
+Invariant sites: 46.47 %
+
+
+NOTE: Binary MSA file created: precompute/415/415_infer.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+
+[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/415/start.newick
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 382 / 6112
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:00 -39171.508765] Initial branch length optimization
+[00:00:00 -39171.508763] Model parameter optimization (eps = 10.000000)
+[00:00:00 -39171.508763] AUTODETECT spr round 1 (radius: 5)
+[00:00:00 -39171.508763] SPR radius for FAST iterations: 5 (autodetect)
+[00:00:00 -39171.508763] Model parameter optimization (eps = 3.000000)
+[00:00:00 -39171.508763] FAST spr round 1 (radius: 5)
+[00:00:00 -39171.508763] Model parameter optimization (eps = 1.000000)
+[00:00:00 -39171.508763] SLOW spr round 1 (radius: 5)
+[00:00:00 -39171.508763] SLOW spr round 2 (radius: 10)
+[00:00:00 -39171.508763] SLOW spr round 3 (radius: 15)
+[00:00:00 -39171.508763] Model parameter optimization (eps = 0.100000)
+
+[00:00:00] ML tree search #1, logLikelihood: -39171.508763
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 1.013000 (user),  weights&rates: (0.250000,0.139540) (0.250000,0.480625) (0.250000,1.002121) (0.250000,2.377714) 
+   P-inv (user): 0.000001
+   Base frequencies (user): 0.251700 0.233200 0.250000 0.265100 
+   Substitution rates (user): 0.914000 0.896600 0.940800 0.916100 0.990300 1.000000 
+
+
+Final LogLikelihood: -39171.508763
+
+AIC score: 78397.017526 / AICc score: 78397.267195 / BIC score: 78578.279802
+Free parameters (model + branch lengths): 27
+
+Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/415/415_infer.raxml.bestTree
+Optimized model saved to: /raid/home/hatang/final_thesis/precompute/415/415_infer.raxml.bestModel
+
+Execution log saved to: /raid/home/hatang/final_thesis/precompute/415/415_infer.raxml.log
+
+Analysis started: 05-May-2026 03:02:37 / finished: 05-May-2026 03:02:38
+
+Elapsed time: 0.250 seconds
+

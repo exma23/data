@@ -1,0 +1,111 @@
+IQ-TREE version 3.1.1 for Linux x86 64-bit built Apr  8 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    IAD1-C632678DGX041 (AVX2, FMA3, 2015 GB RAM)
+Command: iqtree3 -s /raid/home/hatang/final_thesis/data/dna/test/319/data.phy -t /raid/home/hatang/final_thesis/data/dna/test/319/start.newick -m GTR{1.0015,0.9403,0.9673,0.9665,0.9630}+F{0.2415,0.3349,0.2593,0.1644}+I{0.05122}+G4{1.254} --prefix precompute/319/319_infer --threads auto --redo
+Seed:    666900 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue May  5 03:24:03 2026
+Kernel:  AVX+FMA - auto-detect threads (256 CPU cores detected)
+
+Reading alignment file /raid/home/hatang/final_thesis/data/dna/test/319/data.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.0256879 secs using 2165% CPU
+WARNING: 67 sites contain only gaps or ambiguous characters.
+Alignment has 20 sequences with 2928 columns, 1849 distinct patterns
+1257 parsimony-informative, 303 singleton sites, 1368 constant sites
+     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0121326 secs using 2.356e+04% CPU
+   1  T2    37.64%    passed     76.36%
+   2  T3    39.58%    passed     99.04%
+   3  T17   47.13%    passed     46.82%
+   4  T19   42.93%    passed     90.84%
+   5  T5    39.14%    passed     97.02%
+   6  T4    37.84%    passed     69.37%
+   7  T6    37.88%    passed     99.91%
+   8  T7    39.55%    passed     93.40%
+   9  T14   38.29%    passed     89.27%
+  10  T13   43.78%    passed     97.11%
+  11  T15   43.07%    passed     94.14%
+  12  T10   36.44%    passed     94.94%
+  13  T12   48.16%    passed     13.54%
+  14  T8    38.70%    passed     84.38%
+  15  T9    50.44%    passed     73.63%
+  16  T18   50.34%    passed     18.11%
+  17  T16   39.17%    passed     95.28%
+  18  T20   39.07%    passed     79.31%
+  19  T1    32.24%    passed     89.99%
+  20  T11   33.81%    passed     73.08%
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+****  TOTAL   40.76%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.00688603 secs using 1.927e+04% CPU
+Reading input tree file /raid/home/hatang/final_thesis/data/dna/test/319/start.newick ...
+WARNING: Normalizing State frequencies so that sum of them equals to 1
+
+NOTE: 4 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 256 CPU cores
+Increase to 10 rounds for branch lengths
+5245 trees examined
+Threads: 1 / Time: 256.043 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -28496
+Threads: 2 / Time: 246.822 sec / Speedup: 1.037 / Efficiency: 52% / LogL: -28496
+Threads: 3 / Time: 245.450 sec / Speedup: 1.043 / Efficiency: 35% / LogL: -28496
+Determining AUTO threadcount: done in 748.316 secs using 197.3% CPU
+BEST NUMBER OF THREADS: 1
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -21970.953
+Optimal log-likelihood: -21970.953
+Rate parameters:  A-C: 1.00150  A-G: 0.94030  A-T: 0.96730  C-G: 0.96650  C-T: 0.96300  G-T: 1.00000
+Base frequencies:  A: 0.241  C: 0.335  G: 0.259  T: 0.164
+Proportion of invariable sites: 0.051
+Gamma shape alpha: 1.254
+Parameters optimization took 1 rounds (0.009 sec)
+Wrote distance file to... 
+
+Do NNI search on 1 best initial trees
+Finish initializing candidate tree set (1)
+Current best tree score: -21970.953 / CPU time: 0.027
+Number of iterations: 1
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 10 / LogL: -21973.169 / Time: 0h:12m:29s
+Iteration 20 / LogL: -21975.237 / Time: 0h:12m:30s
+Iteration 30 / LogL: -22000.168 / Time: 0h:12m:31s (0h:30m:12s left)
+Iteration 40 / LogL: -21976.115 / Time: 0h:12m:31s (0h:19m:16s left)
+Iteration 50 / LogL: -21972.879 / Time: 0h:12m:32s (0h:12m:48s left)
+Iteration 60 / LogL: -21971.326 / Time: 0h:12m:33s (0h:8m:30s left)
+Iteration 70 / LogL: -21971.619 / Time: 0h:12m:34s (0h:5m:28s left)
+Iteration 80 / LogL: -21971.577 / Time: 0h:12m:35s (0h:3m:11s left)
+Iteration 90 / LogL: -21971.100 / Time: 0h:12m:36s (0h:1m:25s left)
+Iteration 100 / LogL: -21971.231 / Time: 0h:12m:37s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:12m:37s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -21970.953
+Optimal log-likelihood: -21970.953
+Rate parameters:  A-C: 1.00150  A-G: 0.94030  A-T: 0.96730  C-G: 0.96650  C-T: 0.96300  G-T: 1.00000
+Base frequencies:  A: 0.241  C: 0.335  G: 0.259  T: 0.164
+Proportion of invariable sites: 0.051
+Gamma shape alpha: 1.254
+Parameters optimization took 1 rounds (0.008 sec)
+BEST SCORE FOUND : -21970.953
+Total tree length: 3.807
+
+Total number of iterations: 101
+CPU time used for tree search: 9.382 sec (0h:0m:9s)
+Wall-clock time used for tree search: 9.415 sec (0h:0m:9s)
+Total CPU time used: 1490.343 sec (0h:24m:50s)
+Total wall-clock time used: 757.769 sec (0h:12m:37s)
+
+Analysis results written to: 
+  IQ-TREE report:                precompute/319/319_infer.iqtree
+  Maximum-likelihood tree:       precompute/319/319_infer.treefile
+  Screen log file:               precompute/319/319_infer.log
+
+Date and Time: Tue May  5 03:36:41 2026

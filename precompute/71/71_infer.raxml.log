@@ -1,0 +1,96 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+
+RAxML-NG was called at 05-May-2026 03:58:57 as follows:
+
+raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/71/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/71/start.newick --model GTR{1.1904/1.1275/1.0660/1.0823/1.1592/1.0000}+I{1e-06}+G{1.165}+F{0.2639/0.1956/0.2983/0.2423} --prefix precompute/71/71_infer --threads auto --seed 42 --force perf_threads
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): user
+  random seed: 42
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in FORCE mode: some safety checks are disabled!
+
+[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/71/data.phy
+[00:00:00] Loaded alignment with 7 taxa and 2217 sites
+
+WARNING: Fully undetermined columns found: 14
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/71/71_infer.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 697 patterns
+
+Partition 0: noname
+Model: GTR{1.1904/1.1275/1.066/1.0823/1.1592/1}+FU{0.2639/0.1956/0.2983/0.2423}+IU{1e-06}+G4m{1.165}
+Alignment sites / patterns: 2203 / 697
+Gaps: 15.10 %
+Invariant sites: 56.20 %
+
+
+NOTE: Binary MSA file created: precompute/71/71_infer.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 7 thread(s)
+
+[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/71/start.newick
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 100 / 1600
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:00 -9226.056480] Initial branch length optimization
+[00:00:00 -9226.056479] Model parameter optimization (eps = 10.000000)
+[00:00:00 -9226.056479] AUTODETECT spr round 1 (radius: 5)
+[00:00:00 -9226.056479] SPR radius for FAST iterations: 5 (autodetect)
+[00:00:00 -9226.056479] Model parameter optimization (eps = 3.000000)
+[00:00:00 -9226.056479] FAST spr round 1 (radius: 5)
+[00:00:00 -9226.056479] Model parameter optimization (eps = 1.000000)
+[00:00:00 -9226.056479] SLOW spr round 1 (radius: 5)
+[00:00:00 -9226.056479] Model parameter optimization (eps = 0.100000)
+
+[00:00:00] ML tree search #1, logLikelihood: -9226.056479
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 1.165000 (user),  weights&rates: (0.250000,0.168653) (0.250000,0.521290) (0.250000,1.022741) (0.250000,2.287316) 
+   P-inv (user): 0.000001
+   Base frequencies (user): 0.263874 0.195580 0.298270 0.242276 
+   Substitution rates (user): 1.190400 1.127500 1.066000 1.082300 1.159200 1.000000 
+
+
+Final LogLikelihood: -9226.056479
+
+AIC score: 18474.112959 / AICc score: 18474.233452 / BIC score: 18536.786288
+Free parameters (model + branch lengths): 11
+
+Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/71/71_infer.raxml.bestTree
+Optimized model saved to: /raid/home/hatang/final_thesis/precompute/71/71_infer.raxml.bestModel
+
+Execution log saved to: /raid/home/hatang/final_thesis/precompute/71/71_infer.raxml.log
+
+Analysis started: 05-May-2026 03:58:57 / finished: 05-May-2026 03:58:57
+
+Elapsed time: 0.043 seconds
+

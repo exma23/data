@@ -1,0 +1,113 @@
+IQ-TREE version 3.1.1 for Linux x86 64-bit built Apr  8 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    IAD1-C632678DGX041 (AVX2, FMA3, 2015 GB RAM)
+Command: iqtree3 -s /raid/home/hatang/final_thesis/data/dna/test/160/data.phy -t /raid/home/hatang/final_thesis/data/dna/test/160/start.newick -m GTR{0.8524,0.8985,0.8925,1.1912,1.0382}+F{0.3588,0.1707,0.2265,0.244}+I{9.399e-07}+G4{0.9098} --prefix precompute/160/160_infer --threads auto --redo
+Seed:    995422 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue May  5 06:57:43 2026
+Kernel:  AVX+FMA - auto-detect threads (256 CPU cores detected)
+
+Reading alignment file /raid/home/hatang/final_thesis/data/dna/test/160/data.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00560645 secs using 1.003e+04% CPU
+WARNING: 40 sites contain only gaps or ambiguous characters.
+Alignment has 12 sequences with 576 columns, 359 distinct patterns
+219 parsimony-informative, 87 singleton sites, 270 constant sites
+     Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0160719 secs using 1.134e+04% CPU
+   1  T2    32.81%    passed     63.46%
+   2  T6    32.99%    passed     63.41%
+   3  T7    31.60%    passed     92.95%
+   4  T5    28.30%    passed     86.91%
+   5  T3    24.65%    passed     76.27%
+   6  T12   27.26%    passed     90.91%
+   7  T4    44.62%    passed     89.46%
+   8  T9    44.79%    passed     51.38%
+   9  T11   45.66%    passed     29.80%
+  10  T8    45.14%    passed     74.65%
+  11  T1    19.27%    passed     93.38%
+  12  T10   20.31%    passed     88.36%
+****  TOTAL   33.12%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.0120905 secs using 1.635e+04% CPU
+Reading input tree file /raid/home/hatang/final_thesis/data/dna/test/160/start.newick ...
+
+NOTE: 0 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 256 CPU cores
+Increase to 10 rounds for branch lengths
+48963 trees examined
+Threads: 1 / Time: 256.002 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -3720
+Threads: 2 / Time: 314.893 sec / Speedup: 0.813 / Efficiency: 41% / LogL: -3720
+Determining AUTO threadcount: done in 570.895 secs using 152.6% CPU
+BEST NUMBER OF THREADS: 1
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3272.302
+Optimal log-likelihood: -3272.302
+Rate parameters:  A-C: 0.85240  A-G: 0.89850  A-T: 0.89250  C-G: 1.19120  C-T: 1.03820  G-T: 1.00000
+Base frequencies:  A: 0.359  C: 0.171  G: 0.227  T: 0.244
+Proportion of invariable sites: 0.000
+Gamma shape alpha: 0.910
+Parameters optimization took 1 rounds (0.001 sec)
+Wrote distance file to... 
+
+Do NNI search on 1 best initial trees
+Finish initializing candidate tree set (1)
+Current best tree score: -3272.302 / CPU time: 0.003
+Number of iterations: 1
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 10 / LogL: -3272.302 / Time: 0h:9m:31s
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 20 / LogL: -3272.335 / Time: 0h:9m:31s
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 30 / LogL: -3272.322 / Time: 0h:9m:31s (0h:22m:59s left)
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 40 / LogL: -3272.302 / Time: 0h:9m:31s (0h:14m:39s left)
+UPDATE BEST LOG-LIKELIHOOD: -3272.302
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 50 / LogL: -3272.306 / Time: 0h:9m:31s (0h:9m:43s left)
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 60 / LogL: -3272.317 / Time: 0h:9m:32s (0h:6m:27s left)
+Iteration 70 / LogL: -3272.302 / Time: 0h:9m:32s (0h:4m:8s left)
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 80 / LogL: -3272.303 / Time: 0h:9m:32s (0h:2m:24s left)
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 90 / LogL: -3272.302 / Time: 0h:9m:32s (0h:1m:4s left)
+WARNING: NNI search needs unusual large number of steps (12) to converge!
+Iteration 100 / LogL: -3272.303 / Time: 0h:9m:32s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:9m:32s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -3272.302
+Optimal log-likelihood: -3272.302
+Rate parameters:  A-C: 0.85240  A-G: 0.89850  A-T: 0.89250  C-G: 1.19120  C-T: 1.03820  G-T: 1.00000
+Base frequencies:  A: 0.359  C: 0.171  G: 0.227  T: 0.244
+Proportion of invariable sites: 0.000
+Gamma shape alpha: 0.910
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -3272.302
+Total tree length: 2.675
+
+Total number of iterations: 101
+CPU time used for tree search: 1.842 sec (0h:0m:1s)
+Wall-clock time used for tree search: 1.875 sec (0h:0m:1s)
+Total CPU time used: 877.176 sec (0h:14m:37s)
+Total wall-clock time used: 572.795 sec (0h:9m:32s)
+
+Analysis results written to: 
+  IQ-TREE report:                precompute/160/160_infer.iqtree
+  Maximum-likelihood tree:       precompute/160/160_infer.treefile
+  Screen log file:               precompute/160/160_infer.log
+
+Date and Time: Tue May  5 07:07:16 2026

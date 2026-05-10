@@ -1,0 +1,95 @@
+
+RAxML-NG v. 1.2.2 released on 11.04.2024 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+
+RAxML-NG was called at 05-May-2026 11:36:02 as follows:
+
+raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/164/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/164/start.newick --model GTR{1.1916/0.9502/0.7319/0.8951/0.8935/1.0000}+I{9.386e-07}+G{0.9346}+F{0.2621/0.1789/0.2137/0.3453} --prefix precompute/164/164_infer --threads auto --seed 42 --force perf_threads
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): user
+  random seed: 42
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: Running in FORCE mode: some safety checks are disabled!
+
+[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/164/data.phy
+[00:00:00] Loaded alignment with 12 taxa and 606 sites
+
+Alignment comprises 1 partitions and 360 patterns
+
+Partition 0: noname
+Model: GTR{1.1916/0.9502/0.7319/0.8951/0.8935/1}+FU{0.2621/0.1789/0.2137/0.3453}+IU{9.386e-07}+G4m{0.9346}
+Alignment sites / patterns: 606 / 360
+Gaps: 25.29 %
+Invariant sites: 52.15 %
+
+
+NOTE: Binary MSA file created: precompute/164/164_infer.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 6 thread(s)
+
+[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/164/start.newick
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 60 / 960
+[00:00:00] Data distribution: max. searches per worker: 1
+
+Starting ML tree search with 1 distinct starting trees
+
+[00:00:00 -3188.564501] Initial branch length optimization
+[00:00:00 -3188.564475] Model parameter optimization (eps = 10.000000)
+[00:00:00 -3188.564475] AUTODETECT spr round 1 (radius: 5)
+[00:00:00 -3188.564475] SPR radius for FAST iterations: 5 (autodetect)
+[00:00:00 -3188.564475] Model parameter optimization (eps = 3.000000)
+[00:00:00 -3188.564475] FAST spr round 1 (radius: 5)
+[00:00:00 -3188.564475] Model parameter optimization (eps = 1.000000)
+[00:00:00 -3188.564475] SLOW spr round 1 (radius: 5)
+[00:00:00 -3188.564475] SLOW spr round 2 (radius: 10)
+[00:00:00 -3188.564475] Model parameter optimization (eps = 0.100000)
+
+[00:00:00] ML tree search #1, logLikelihood: -3188.564475
+
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.934600 (user),  weights&rates: (0.250000,0.123727) (0.250000,0.456171) (0.250000,0.988258) (0.250000,2.431844) 
+   P-inv (user): 0.000001
+   Base frequencies (user): 0.262100 0.178900 0.213700 0.345300 
+   Substitution rates (user): 1.191600 0.950200 0.731900 0.895100 0.893500 1.000000 
+
+
+Final LogLikelihood: -3188.564475
+
+AIC score: 6419.128950 / AICc score: 6420.711142 / BIC score: 6511.673430
+Free parameters (model + branch lengths): 21
+
+WARNING: Best ML tree contains 1 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /raid/home/hatang/final_thesis/precompute/164/164_infer.raxml.bestTreeCollapsed
+Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/164/164_infer.raxml.bestTree
+Optimized model saved to: /raid/home/hatang/final_thesis/precompute/164/164_infer.raxml.bestModel
+
+Execution log saved to: /raid/home/hatang/final_thesis/precompute/164/164_infer.raxml.log
+
+Analysis started: 05-May-2026 11:36:02 / finished: 05-May-2026 11:36:02
+
+Elapsed time: 0.063 seconds
+
