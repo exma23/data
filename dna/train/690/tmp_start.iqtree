@@ -1,0 +1,142 @@
+IQ-TREE 3.1.1 built Apr  8 2026
+
+Input file name: data_new2/dna/train/36/data.phy
+Type of analysis: tree reconstruction
+Random seed number: 718703
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+SEQUENCE ALIGNMENT
+------------------
+
+NOTE: Alignment sequence type is auto-detected. If in doubt, specify it via -st option.
+Input data: 15 sequences with 6545 nucleotide sites
+Number of constant sites: 2907 (= 44.4156% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 2907 (= 44.4156% of all sites)
+Number of parsimony informative sites: 2622
+Number of distinct site patterns: 3622
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.1649
+  A-G: 1.0889
+  A-T: 1.1474
+  C-G: 1.1466
+  C-T: 1.2178
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3209
+  pi(C) = 0.2969
+  pi(G) = 0.2681
+  pi(T) = 0.1141
+
+Rate matrix Q:
+
+  A   -0.9379    0.4219    0.3562    0.1597
+  C    0.4561    -1.001    0.3751    0.1695
+  G    0.4264    0.4153   -0.9809    0.1392
+  T    0.4493    0.4411    0.3272    -1.218
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 9.685e-07
+Gamma shape alpha: 0.9933
+
+ Category  Relative_rate  Proportion
+  0         0              9.685e-07
+  1         0.1356         0.25
+  2         0.4747         0.25
+  3         0.9989         0.25
+  4         2.391          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+STARTING TREE
+-------------
+
+Log-likelihood of the tree: -52883.9666 (s.e. 536.8698)
+Unconstrained log-likelihood (without tree): -48051.0468
+Number of free parameters (#branches + #model parameters): 37
+Akaike information criterion (AIC) score: 105841.9331
+Corrected Akaike information criterion (AICc) score: 105842.3653
+Bayesian information criterion (BIC) score: 106093.0320
+
+Total tree length (sum of branch lengths): 4.2480
+Sum of internal branch lengths: 0.5692 (13.3997% of tree length)
+
+WARNING: 7 near-zero internal branches (<0.0002) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
+
++--------------T2
+|
+|             +-----------T7
+|          +**|
+|          |  |                       +-------------------------------T8
+|          |  |                    +**|
+|          |  |                    |  |  +---------T15
+|          |  |                    |  +**|
+|          |  |                    |     +-------------------T10
+|          |  +--------------------|
+|          |                       +-----T6
+|       +**|
+|       |  |  +-----T13
+|       |  +**|
+|       |     |     +----------------T11
+|       |     +-----|
+|       |           +---------------------------T12
+|  +----|
+|  |    |  +-----T14
+|  |    +**|
+|  |       |  +---T4
+|  |       +--|
+|  |          +-------------------------T1
++**|
+|  |  +---------------------------T9
+|  +--|
+|     +--------------T3
+|
++-----------------------T5
+
+Tree in newick format:
+
+(T2:0.2151359466,((((T7:0.1808673925,((T8:0.4656084997,(T15:0.1554725964,T10:0.2994648600):0.0000021945):0.0000023454,T6:0.0962144221):0.3093434605):0.0000023984,(T13:0.0889024841,(T11:0.2514746665,T12:0.4130563591):0.0984149952):0.0000025643):0.0000025630,(T14:0.0889430788,(T4:0.0671646782,T1:0.3781005574):0.0251164797):0.0000029984):0.0834976554,(T9:0.4042478653,T3:0.2284241080):0.0528303427):0.0000021583,T5:0.3456938738);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data_new2/dna/train/36/tmp_start.treefile -m "GTR{1.16489,1.08888,1.14739,1.1466,1.21781}+F{0.320906,0.296862,0.268131,0.114102}+I{9.68485e-07}+G4{0.993273}" --length 6545
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data_new2/dna/train/36/data.phy --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data_new2/dna/train/36/data.phy --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed May 13 12:04:34 2026
+Total CPU time used: 82.6556 seconds (0h:1m:22s)
+Total wall-clock time used: 10.3549 seconds (0h:0m:10s)
+
