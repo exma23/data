@@ -5,11 +5,11 @@ Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Be
 Latest version: https://github.com/amkozlov/raxml-ng
 Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
 
-System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+System: 13th Gen Intel(R) Core(TM) i5-13500H, 12 cores, 31 GB RAM (allocated: 8 physical cores)
 
-RAxML-NG was called at 05-May-2026 17:03:33 as follows:
+RAxML-NG was called at 16-May-2026 12:08:42 as follows:
 
-raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/340/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/340/start.newick --model GTR{1.4159/1.2762/1.0027/1.1418/0.8618/1.0000}+I{0.09335}+G{1.319}+F{0.1529/0.1969/0.3679/0.2824} --prefix precompute/340/340_infer --threads auto --seed 42 --force perf_threads
+raxml-ng --search --msa /home/ha/Code/data/dna/test/340/data.phy --tree /home/ha/Code/data/dna/test/340/start.newick --model GTR{1.4159/1.2762/1.0027/1.1418/0.8618/1.0000}+I{0.09335}+G{1.319}+F{0.1529/0.1969/0.3679/0.2824} --prefix /home/ha/Code/data/precompute/340/340_infer --threads 1 --seed 42 --force perf_threads --redo
 
 Analysis options:
   run mode: ML tree search
@@ -25,17 +25,19 @@ Analysis options:
   fast CLV updates: ON
   branch lengths: proportional (ML estimate, algorithm: NR-FAST)
   SIMD kernels: AVX2
-  parallelization: coarse-grained (auto), PTHREADS (auto)
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 WARNING: Running in FORCE mode: some safety checks are disabled!
 
-[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/340/data.phy
+[00:00:00] Reading alignment from file: /home/ha/Code/data/dna/test/340/data.phy
 [00:00:00] Loaded alignment with 15 taxa and 594 sites
 
 WARNING: Fully undetermined columns found: 1
 
 NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/340/340_infer.raxml.reduced.phy
+NOTE: was saved to: /home/ha/Code/data/precompute/340/340_infer.raxml.reduced.phy
 
 Alignment comprises 1 partitions and 424 patterns
 
@@ -46,14 +48,14 @@ Gaps: 24.79 %
 Invariant sites: 43.00 %
 
 
-NOTE: Binary MSA file created: precompute/340/340_infer.raxml.rba
+NOTE: Binary MSA file created: /home/ha/Code/data/precompute/340/340_infer.raxml.rba
 
-Parallelization scheme autoconfig: 1 worker(s) x 5 thread(s)
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
 
-[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/340/start.newick
+[00:00:00] Loading user starting tree(s) from: /home/ha/Code/data/dna/test/340/start.newick
 Parallel reduction/worker buffer size: 1 KB  / 0 KB
 
-[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 85 / 1360
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 424 / 6784
 [00:00:00] Data distribution: max. searches per worker: 1
 
 Starting ML tree search with 1 distinct starting trees
@@ -87,12 +89,12 @@ Final LogLikelihood: -4098.439857
 AIC score: 8250.879714 / AICc score: 8253.555821 / BIC score: 8369.279963
 Free parameters (model + branch lengths): 27
 
-Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/340/340_infer.raxml.bestTree
-Optimized model saved to: /raid/home/hatang/final_thesis/precompute/340/340_infer.raxml.bestModel
+Best ML tree saved to: /home/ha/Code/data/precompute/340/340_infer.raxml.bestTree
+Optimized model saved to: /home/ha/Code/data/precompute/340/340_infer.raxml.bestModel
 
-Execution log saved to: /raid/home/hatang/final_thesis/precompute/340/340_infer.raxml.log
+Execution log saved to: /home/ha/Code/data/precompute/340/340_infer.raxml.log
 
-Analysis started: 05-May-2026 17:03:33 / finished: 05-May-2026 17:03:33
+Analysis started: 16-May-2026 12:08:42 / finished: 16-May-2026 12:08:42
 
-Elapsed time: 0.130 seconds
+Elapsed time: 0.238 seconds
 

@@ -5,11 +5,11 @@ Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Be
 Latest version: https://github.com/amkozlov/raxml-ng
 Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
 
-System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+System: 13th Gen Intel(R) Core(TM) i5-13500H, 12 cores, 31 GB RAM (allocated: 8 physical cores)
 
-RAxML-NG was called at 05-May-2026 03:24:03 as follows:
+RAxML-NG was called at 16-May-2026 12:07:56 as follows:
 
-raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/297/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/297/start.newick --model GTR{0.8283/0.9398/0.9400/0.9154/0.9333/1.0000}+I{0.09032}+G{1.442}+F{0.3457/0.1635/0.1843/0.3066} --prefix precompute/297/297_infer --threads auto --seed 42 --force perf_threads
+raxml-ng --search --msa /home/ha/Code/data/dna/test/297/data.phy --tree /home/ha/Code/data/dna/test/297/start.newick --model GTR{0.8283/0.9398/0.9400/0.9154/0.9333/1.0000}+I{0.09032}+G{1.442}+F{0.3457/0.1635/0.1843/0.3066} --prefix /home/ha/Code/data/precompute/297/297_infer --threads 1 --seed 42 --force perf_threads --redo
 
 Analysis options:
   run mode: ML tree search
@@ -25,17 +25,19 @@ Analysis options:
   fast CLV updates: ON
   branch lengths: proportional (ML estimate, algorithm: NR-FAST)
   SIMD kernels: AVX2
-  parallelization: coarse-grained (auto), PTHREADS (auto)
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 WARNING: Running in FORCE mode: some safety checks are disabled!
 
-[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/297/data.phy
+[00:00:00] Reading alignment from file: /home/ha/Code/data/dna/test/297/data.phy
 [00:00:00] Loaded alignment with 20 taxa and 1395 sites
 
 WARNING: Fully undetermined columns found: 3
 
 NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/297/297_infer.raxml.reduced.phy
+NOTE: was saved to: /home/ha/Code/data/precompute/297/297_infer.raxml.reduced.phy
 
 Alignment comprises 1 partitions and 1034 patterns
 
@@ -46,14 +48,14 @@ Gaps: 32.64 %
 Invariant sites: 41.24 %
 
 
-NOTE: Binary MSA file created: precompute/297/297_infer.raxml.rba
+NOTE: Binary MSA file created: /home/ha/Code/data/precompute/297/297_infer.raxml.rba
 
-Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
 
-[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/297/start.newick
+[00:00:00] Loading user starting tree(s) from: /home/ha/Code/data/dna/test/297/start.newick
 Parallel reduction/worker buffer size: 1 KB  / 0 KB
 
-[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 130 / 2080
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 1034 / 16544
 [00:00:00] Data distribution: max. searches per worker: 1
 
 Starting ML tree search with 1 distinct starting trees
@@ -88,12 +90,12 @@ Final LogLikelihood: -11203.561299
 AIC score: 22481.122598 / AICc score: 22483.199407 / BIC score: 22674.946981
 Free parameters (model + branch lengths): 37
 
-Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/297/297_infer.raxml.bestTree
-Optimized model saved to: /raid/home/hatang/final_thesis/precompute/297/297_infer.raxml.bestModel
+Best ML tree saved to: /home/ha/Code/data/precompute/297/297_infer.raxml.bestTree
+Optimized model saved to: /home/ha/Code/data/precompute/297/297_infer.raxml.bestModel
 
-Execution log saved to: /raid/home/hatang/final_thesis/precompute/297/297_infer.raxml.log
+Execution log saved to: /home/ha/Code/data/precompute/297/297_infer.raxml.log
 
-Analysis started: 05-May-2026 03:24:03 / finished: 05-May-2026 03:24:03
+Analysis started: 16-May-2026 12:07:56 / finished: 16-May-2026 12:07:56
 
-Elapsed time: 0.183 seconds
+Elapsed time: 0.509 seconds
 

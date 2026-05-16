@@ -3,20 +3,23 @@ Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
 Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
 Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
-Host:    IAD1-C632678DGX041 (AVX2, FMA3, 2015 GB RAM)
-Command: iqtree3 -s /raid/home/hatang/final_thesis/data/dna/test/245/data.phy -t /raid/home/hatang/final_thesis/data/dna/test/245/start.newick -m GTR{0.9455,0.8033,1.0544,0.9645,1.0255}+F{0.2956,0.3975,0.161,0.1459}+I{0.05684}+G4{1.25} --prefix precompute/245/245_infer --threads auto --redo
-Seed:    931592 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Tue May  5 02:30:08 2026
-Kernel:  AVX+FMA - auto-detect threads (256 CPU cores detected)
+Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
+Command: iqtree3 -s /home/ha/Code/data/dna/test/245/data.phy -t /home/ha/Code/data/dna/test/245/start.newick -m GTR{0.9455,0.8033,1.0544,0.9645,1.0255}+F{0.2956,0.3975,0.161,0.1459}+I{0.05684}+G4{1.25} --prefix /home/ha/Code/data/precompute/245/245_infer -T 1 --redo
+Seed:    124347 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat May 16 12:07:12 2026
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
-Reading alignment file /raid/home/hatang/final_thesis/data/dna/test/245/data.phy ... Phylip format detected
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /home/ha/Code/data/dna/test/245/data.phy ... Phylip format detected
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.0329425 secs using 4761% CPU
+Constructing alignment: done in 0.00245172 secs using 69.95% CPU
 WARNING: 32 sites contain only gaps or ambiguous characters.
 Alignment has 12 sequences with 3648 columns, 1748 distinct patterns
 1089 parsimony-informative, 673 singleton sites, 1886 constant sites
      Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 0.0122808 secs using 2.156e+04% CPU
+Analyzing sequences: done in 6.7943e-05 secs using 73.59% CPU
    1  T2    36.65%    passed     47.17%
    2  T11   35.83%    passed     67.90%
    3  T7    26.18%    passed     96.28%
@@ -30,19 +33,10 @@ Analyzing sequences: done in 0.0122808 secs using 2.156e+04% CPU
   11  T10   19.57%    passed     66.58%
   12  T12   20.83%    passed     92.40%
 ****  TOTAL   27.07%  0 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 0.0195874 secs using 1.204e+04% CPU
-Reading input tree file /raid/home/hatang/final_thesis/data/dna/test/245/start.newick ...
+Checking for duplicate sequences: done in 9.2158e-05 secs using 74.87% CPU
+Reading input tree file /home/ha/Code/data/dna/test/245/start.newick ...
 
 NOTE: 2 MB RAM (0 GB) is required!
-Measuring multi-threading efficiency up to 256 CPU cores
-Increase to 10 rounds for branch lengths
-12945 trees examined
-Threads: 1 / Time: 256.002 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -21774
-Threads: 2 / Time: 238.933 sec / Speedup: 1.071 / Efficiency: 54% / LogL: -21774
-Threads: 3 / Time: 230.312 sec / Speedup: 1.112 / Efficiency: 37% / LogL: -21774
-Determining AUTO threadcount: done in 725.248 secs using 194.9% CPU
-BEST NUMBER OF THREADS: 2
-
 Estimate model parameters (epsilon = 0.100)
 1. Initial log-likelihood: -19545.134
 Optimal log-likelihood: -19545.134
@@ -50,28 +44,27 @@ Rate parameters:  A-C: 0.94550  A-G: 0.80330  A-T: 1.05440  C-G: 0.96450  C-T: 1
 Base frequencies:  A: 0.296  C: 0.398  G: 0.161  T: 0.146
 Proportion of invariable sites: 0.057
 Gamma shape alpha: 1.250
-Parameters optimization took 1 rounds (0.004 sec)
+Parameters optimization took 1 rounds (0.021 sec)
 Wrote distance file to... 
 
 Do NNI search on 1 best initial trees
 Finish initializing candidate tree set (1)
-Current best tree score: -19545.134 / CPU time: 0.011
+Current best tree score: -19545.134 / CPU time: 0.027
 Number of iterations: 1
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Iteration 10 / LogL: -19545.144 / Time: 0h:12m:5s
-Iteration 20 / LogL: -19545.243 / Time: 0h:12m:5s
-Iteration 30 / LogL: -19545.237 / Time: 0h:12m:6s (0h:29m:13s left)
-Iteration 40 / LogL: -19545.151 / Time: 0h:12m:6s (0h:18m:37s left)
-Iteration 50 / LogL: -19545.229 / Time: 0h:12m:6s (0h:12m:21s left)
-Iteration 60 / LogL: -19552.511 / Time: 0h:12m:7s (0h:8m:13s left)
-Iteration 70 / LogL: -19545.806 / Time: 0h:12m:7s (0h:5m:16s left)
-UPDATE BEST LOG-LIKELIHOOD: -19545.134
-Iteration 80 / LogL: -19545.151 / Time: 0h:12m:7s (0h:3m:4s left)
-Iteration 90 / LogL: -19552.808 / Time: 0h:12m:8s (0h:1m:21s left)
-Iteration 100 / LogL: -19545.231 / Time: 0h:12m:8s (0h:0m:0s left)
-TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:12m:8s
+Iteration 10 / LogL: -19545.162 / Time: 0h:0m:0s
+Iteration 20 / LogL: -19547.025 / Time: 0h:0m:0s
+Iteration 30 / LogL: -19545.504 / Time: 0h:0m:1s (0h:0m:2s left)
+Iteration 40 / LogL: -19545.268 / Time: 0h:0m:1s (0h:0m:2s left)
+Iteration 50 / LogL: -19547.076 / Time: 0h:0m:1s (0h:0m:1s left)
+Iteration 60 / LogL: -19545.247 / Time: 0h:0m:2s (0h:0m:1s left)
+Iteration 70 / LogL: -19545.146 / Time: 0h:0m:2s (0h:0m:1s left)
+Iteration 80 / LogL: -19545.340 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 90 / LogL: -19545.154 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 100 / LogL: -19545.632 / Time: 0h:0m:3s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:3s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
@@ -84,19 +77,19 @@ Rate parameters:  A-C: 0.94550  A-G: 0.80330  A-T: 1.05440  C-G: 0.96450  C-T: 1
 Base frequencies:  A: 0.296  C: 0.398  G: 0.161  T: 0.146
 Proportion of invariable sites: 0.057
 Gamma shape alpha: 1.250
-Parameters optimization took 1 rounds (0.003 sec)
+Parameters optimization took 1 rounds (0.006 sec)
 BEST SCORE FOUND : -19545.134
 Total tree length: 1.644
 
 Total number of iterations: 101
-CPU time used for tree search: 6.709 sec (0h:0m:6s)
-Wall-clock time used for tree search: 3.390 sec (0h:0m:3s)
-Total CPU time used: 1425.019 sec (0h:23m:45s)
-Total wall-clock time used: 728.671 sec (0h:12m:8s)
+CPU time used for tree search: 3.581 sec (0h:0m:3s)
+Wall-clock time used for tree search: 3.603 sec (0h:0m:3s)
+Total CPU time used: 3.617 sec (0h:0m:3s)
+Total wall-clock time used: 3.640 sec (0h:0m:3s)
 
 Analysis results written to: 
-  IQ-TREE report:                precompute/245/245_infer.iqtree
-  Maximum-likelihood tree:       precompute/245/245_infer.treefile
-  Screen log file:               precompute/245/245_infer.log
+  IQ-TREE report:                /home/ha/Code/data/precompute/245/245_infer.iqtree
+  Maximum-likelihood tree:       /home/ha/Code/data/precompute/245/245_infer.treefile
+  Screen log file:               /home/ha/Code/data/precompute/245/245_infer.log
 
-Date and Time: Tue May  5 02:42:17 2026
+Date and Time: Sat May 16 12:07:15 2026

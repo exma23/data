@@ -5,11 +5,11 @@ Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Be
 Latest version: https://github.com/amkozlov/raxml-ng
 Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
 
-System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+System: 13th Gen Intel(R) Core(TM) i5-13500H, 12 cores, 31 GB RAM (allocated: 8 physical cores)
 
-RAxML-NG was called at 05-May-2026 01:07:15 as follows:
+RAxML-NG was called at 16-May-2026 12:11:49 as follows:
 
-raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/424/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/424/start.newick --model GTR{0.9610/0.9469/0.9673/0.9348/0.9124/1.0000}+I{9.889e-07}+G{0.9799}+F{0.333/0.1885/0.2115/0.2671} --prefix precompute/424/424_infer --threads auto --seed 42 --force perf_threads
+raxml-ng --search --msa /home/ha/Code/data/dna/test/424/data.phy --tree /home/ha/Code/data/dna/test/424/start.newick --model GTR{0.9610/0.9469/0.9673/0.9348/0.9124/1.0000}+I{9.889e-07}+G{0.9799}+F{0.333/0.1885/0.2115/0.2671} --prefix /home/ha/Code/data/precompute/424/424_infer --threads 1 --seed 42 --force perf_threads --redo
 
 Analysis options:
   run mode: ML tree search
@@ -25,17 +25,19 @@ Analysis options:
   fast CLV updates: ON
   branch lengths: proportional (ML estimate, algorithm: NR-FAST)
   SIMD kernels: AVX2
-  parallelization: coarse-grained (auto), PTHREADS (auto)
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 WARNING: Running in FORCE mode: some safety checks are disabled!
 
-[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/424/data.phy
+[00:00:00] Reading alignment from file: /home/ha/Code/data/dna/test/424/data.phy
 [00:00:00] Loaded alignment with 20 taxa and 7032 sites
 
 WARNING: Fully undetermined columns found: 93
 
 NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/424/424_infer.raxml.reduced.phy
+NOTE: was saved to: /home/ha/Code/data/precompute/424/424_infer.raxml.reduced.phy
 
 Alignment comprises 1 partitions and 4046 patterns
 
@@ -46,14 +48,14 @@ Gaps: 39.67 %
 Invariant sites: 45.65 %
 
 
-NOTE: Binary MSA file created: precompute/424/424_infer.raxml.rba
+NOTE: Binary MSA file created: /home/ha/Code/data/precompute/424/424_infer.raxml.rba
 
-Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
 
-[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/424/start.newick
+[00:00:00] Loading user starting tree(s) from: /home/ha/Code/data/dna/test/424/start.newick
 Parallel reduction/worker buffer size: 1 KB  / 0 KB
 
-[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 506 / 8096
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 4046 / 64736
 [00:00:00] Data distribution: max. searches per worker: 1
 
 Starting ML tree search with 1 distinct starting trees
@@ -64,14 +66,14 @@ Starting ML tree search with 1 distinct starting trees
 [00:00:00 -52811.736417] SPR radius for FAST iterations: 5 (autodetect)
 [00:00:00 -52811.736417] Model parameter optimization (eps = 3.000000)
 [00:00:00 -52811.736417] FAST spr round 1 (radius: 5)
-[00:00:00 -52811.736417] Model parameter optimization (eps = 1.000000)
-[00:00:00 -52811.736417] SLOW spr round 1 (radius: 5)
-[00:00:00 -52811.736417] SLOW spr round 2 (radius: 10)
-[00:00:00 -52811.736417] SLOW spr round 3 (radius: 15)
-[00:00:00 -52811.736417] SLOW spr round 4 (radius: 20)
-[00:00:00 -52811.736417] Model parameter optimization (eps = 0.100000)
+[00:00:01 -52811.736417] Model parameter optimization (eps = 1.000000)
+[00:00:01 -52811.736417] SLOW spr round 1 (radius: 5)
+[00:00:03 -52811.736417] SLOW spr round 2 (radius: 10)
+[00:00:04 -52811.736417] SLOW spr round 3 (radius: 15)
+[00:00:04 -52811.736417] SLOW spr round 4 (radius: 20)
+[00:00:04 -52811.736417] Model parameter optimization (eps = 0.100000)
 
-[00:00:00] ML tree search #1, logLikelihood: -52811.736417
+[00:00:04] ML tree search #1, logLikelihood: -52811.736417
 
 
 Optimized model parameters:
@@ -88,12 +90,12 @@ Final LogLikelihood: -52811.736417
 AIC score: 105697.472834 / AICc score: 105697.880311 / BIC score: 105950.734613
 Free parameters (model + branch lengths): 37
 
-Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/424/424_infer.raxml.bestTree
-Optimized model saved to: /raid/home/hatang/final_thesis/precompute/424/424_infer.raxml.bestModel
+Best ML tree saved to: /home/ha/Code/data/precompute/424/424_infer.raxml.bestTree
+Optimized model saved to: /home/ha/Code/data/precompute/424/424_infer.raxml.bestModel
 
-Execution log saved to: /raid/home/hatang/final_thesis/precompute/424/424_infer.raxml.log
+Execution log saved to: /home/ha/Code/data/precompute/424/424_infer.raxml.log
 
-Analysis started: 05-May-2026 01:07:15 / finished: 05-May-2026 01:07:15
+Analysis started: 16-May-2026 12:11:49 / finished: 16-May-2026 12:11:53
 
-Elapsed time: 0.509 seconds
+Elapsed time: 4.344 seconds
 

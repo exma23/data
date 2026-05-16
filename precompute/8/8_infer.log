@@ -3,19 +3,22 @@ Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
 Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
 Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
-Host:    IAD1-C632678DGX041 (AVX2, FMA3, 2015 GB RAM)
-Command: iqtree3 -s /raid/home/hatang/final_thesis/data/dna/test/8/data.phy -t /raid/home/hatang/final_thesis/data/dna/test/8/start.newick -m GTR{0.9394,0.6272,1.0083,0.8206,0.7956}+F{0.2517,0.2625,0.2807,0.205}+I{0.3058}+G4{10.04} --prefix precompute/8/8_infer --threads auto --redo
-Seed:    564481 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Tue May  5 09:34:43 2026
-Kernel:  AVX+FMA - auto-detect threads (256 CPU cores detected)
+Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
+Command: iqtree3 -s /home/ha/Code/data/dna/test/8/data.phy -t /home/ha/Code/data/dna/test/8/start.newick -m GTR{0.9394,0.6272,1.0083,0.8206,0.7956}+F{0.2517,0.2625,0.2807,0.205}+I{0.3058}+G4{10.04} --prefix /home/ha/Code/data/precompute/8/8_infer -T 1 --redo
+Seed:    609585 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat May 16 12:06:09 2026
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
-Reading alignment file /raid/home/hatang/final_thesis/data/dna/test/8/data.phy ... Phylip format detected
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /home/ha/Code/data/dna/test/8/data.phy ... Phylip format detected
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.00517832 secs using 7457% CPU
+Constructing alignment: done in 0.000527206 secs using 71.32% CPU
 Alignment has 7 sequences with 533 columns, 222 distinct patterns
 104 parsimony-informative, 132 singleton sites, 297 constant sites
     Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 0.00626821 secs using 2.41e+04% CPU
+Analyzing sequences: done in 1.4422e-05 secs using 90.14% CPU
    1  T2    6.75%    passed     92.26%
    2  T7    5.25%    passed     85.36%
    3  T3    6.38%    passed     86.29%
@@ -24,19 +27,11 @@ Analyzing sequences: done in 0.00626821 secs using 2.41e+04% CPU
    6  T1    7.32%    passed     54.22%
    7  T6   15.76%    passed     49.35%
 ****  TOTAL    7.59%  0 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 0.0063347 secs using 1.881e+04% CPU
-Reading input tree file /raid/home/hatang/final_thesis/data/dna/test/8/start.newick ...
+Checking for duplicate sequences: done in 2.5298e-05 secs using 94.87% CPU
+Reading input tree file /home/ha/Code/data/dna/test/8/start.newick ...
 WARNING: Normalizing State frequencies so that sum of them equals to 1
 
 NOTE: 0 MB RAM (0 GB) is required!
-Measuring multi-threading efficiency up to 256 CPU cores
-Increase to 10 rounds for branch lengths
-204461 trees examined
-Threads: 1 / Time: 256.001 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -2388
-Threads: 2 / Time: 388.597 sec / Speedup: 0.659 / Efficiency: 33% / LogL: -2388
-Determining AUTO threadcount: done in 644.599 secs using 156.3% CPU
-BEST NUMBER OF THREADS: 1
-
 Estimate model parameters (epsilon = 0.100)
 1. Initial log-likelihood: -2260.933
 Optimal log-likelihood: -2260.933
@@ -49,24 +44,24 @@ Wrote distance file to...
 
 Do NNI search on 1 best initial trees
 Finish initializing candidate tree set (1)
-Current best tree score: -2260.933 / CPU time: 0.001
+Current best tree score: -2260.933 / CPU time: 0.004
 Number of iterations: 1
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Iteration 10 / LogL: -2260.936 / Time: 0h:10m:44s
-Iteration 20 / LogL: -2260.935 / Time: 0h:10m:44s
+Iteration 10 / LogL: -2260.944 / Time: 0h:0m:0s
 UPDATE BEST LOG-LIKELIHOOD: -2260.933
-Iteration 30 / LogL: -2260.933 / Time: 0h:10m:44s (0h:25m:56s left)
+Iteration 20 / LogL: -2260.935 / Time: 0h:0m:0s
 UPDATE BEST LOG-LIKELIHOOD: -2260.933
-Iteration 40 / LogL: -2260.936 / Time: 0h:10m:44s (0h:16m:31s left)
-Iteration 50 / LogL: -2260.935 / Time: 0h:10m:44s (0h:10m:57s left)
-Iteration 60 / LogL: -2260.935 / Time: 0h:10m:44s (0h:7m:17s left)
-Iteration 70 / LogL: -2260.933 / Time: 0h:10m:44s (0h:4m:40s left)
-Iteration 80 / LogL: -2260.976 / Time: 0h:10m:44s (0h:2m:43s left)
-Iteration 90 / LogL: -2260.943 / Time: 0h:10m:44s (0h:1m:12s left)
-Iteration 100 / LogL: -2260.933 / Time: 0h:10m:44s (0h:0m:0s left)
-TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:10m:44s
+Iteration 30 / LogL: -2260.936 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -2260.936 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -2260.934 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 60 / LogL: -2260.933 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -2260.933 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -2260.935 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -2260.933 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -2260.935 / Time: 0h:0m:0s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
@@ -84,14 +79,14 @@ BEST SCORE FOUND : -2260.933
 Total tree length: 0.889
 
 Total number of iterations: 101
-CPU time used for tree search: 0.306 sec (0h:0m:0s)
-Wall-clock time used for tree search: 0.314 sec (0h:0m:0s)
-Total CPU time used: 1010.632 sec (0h:16m:50s)
-Total wall-clock time used: 644.942 sec (0h:10m:44s)
+CPU time used for tree search: 0.299 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.309 sec (0h:0m:0s)
+Total CPU time used: 0.311 sec (0h:0m:0s)
+Total wall-clock time used: 0.322 sec (0h:0m:0s)
 
 Analysis results written to: 
-  IQ-TREE report:                precompute/8/8_infer.iqtree
-  Maximum-likelihood tree:       precompute/8/8_infer.treefile
-  Screen log file:               precompute/8/8_infer.log
+  IQ-TREE report:                /home/ha/Code/data/precompute/8/8_infer.iqtree
+  Maximum-likelihood tree:       /home/ha/Code/data/precompute/8/8_infer.treefile
+  Screen log file:               /home/ha/Code/data/precompute/8/8_infer.log
 
-Date and Time: Tue May  5 09:45:28 2026
+Date and Time: Sat May 16 12:06:09 2026

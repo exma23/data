@@ -5,11 +5,11 @@ Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Be
 Latest version: https://github.com/amkozlov/raxml-ng
 Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
 
-System: AMD EPYC 7742 64-Core Processor, 128 cores, 2015 GB RAM
+System: 13th Gen Intel(R) Core(TM) i5-13500H, 12 cores, 31 GB RAM (allocated: 8 physical cores)
 
-RAxML-NG was called at 05-May-2026 10:13:04 as follows:
+RAxML-NG was called at 16-May-2026 12:07:28 as follows:
 
-raxml-ng --search --msa /raid/home/hatang/final_thesis/data/dna/test/259/data.phy --tree /raid/home/hatang/final_thesis/data/dna/test/259/start.newick --model GTR{0.8286/0.8376/0.8100/0.7229/0.7733/1.0000}+I{0.05359}+G{1.208}+F{0.2353/0.3001/0.2033/0.2613} --prefix precompute/259/259_infer --threads auto --seed 42 --force perf_threads
+raxml-ng --search --msa /home/ha/Code/data/dna/test/259/data.phy --tree /home/ha/Code/data/dna/test/259/start.newick --model GTR{0.8286/0.8376/0.8100/0.7229/0.7733/1.0000}+I{0.05359}+G{1.208}+F{0.2353/0.3001/0.2033/0.2613} --prefix /home/ha/Code/data/precompute/259/259_infer --threads 1 --seed 42 --force perf_threads --redo
 
 Analysis options:
   run mode: ML tree search
@@ -25,17 +25,19 @@ Analysis options:
   fast CLV updates: ON
   branch lengths: proportional (ML estimate, algorithm: NR-FAST)
   SIMD kernels: AVX2
-  parallelization: coarse-grained (auto), PTHREADS (auto)
+  parallelization: coarse-grained (auto), NONE/sequential
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
 
 WARNING: Running in FORCE mode: some safety checks are disabled!
 
-[00:00:00] Reading alignment from file: /raid/home/hatang/final_thesis/data/dna/test/259/data.phy
+[00:00:00] Reading alignment from file: /home/ha/Code/data/dna/test/259/data.phy
 [00:00:00] Loaded alignment with 20 taxa and 717 sites
 
 WARNING: Fully undetermined columns found: 14
 
 NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /raid/home/hatang/final_thesis/precompute/259/259_infer.raxml.reduced.phy
+NOTE: was saved to: /home/ha/Code/data/precompute/259/259_infer.raxml.reduced.phy
 
 Alignment comprises 1 partitions and 499 patterns
 
@@ -46,14 +48,14 @@ Gaps: 42.11 %
 Invariant sites: 46.94 %
 
 
-NOTE: Binary MSA file created: precompute/259/259_infer.raxml.rba
+NOTE: Binary MSA file created: /home/ha/Code/data/precompute/259/259_infer.raxml.rba
 
-Parallelization scheme autoconfig: 1 worker(s) x 6 thread(s)
+Parallelization scheme autoconfig: 1 worker(s) x 1 thread(s)
 
-[00:00:00] Loading user starting tree(s) from: /raid/home/hatang/final_thesis/data/dna/test/259/start.newick
+[00:00:00] Loading user starting tree(s) from: /home/ha/Code/data/dna/test/259/start.newick
 Parallel reduction/worker buffer size: 1 KB  / 0 KB
 
-[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 84 / 1344
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 499 / 7984
 [00:00:00] Data distribution: max. searches per worker: 1
 
 Starting ML tree search with 1 distinct starting trees
@@ -88,12 +90,12 @@ Final LogLikelihood: -5074.544467
 AIC score: 10223.088935 / AICc score: 10227.317506 / BIC score: 10391.637140
 Free parameters (model + branch lengths): 37
 
-Best ML tree saved to: /raid/home/hatang/final_thesis/precompute/259/259_infer.raxml.bestTree
-Optimized model saved to: /raid/home/hatang/final_thesis/precompute/259/259_infer.raxml.bestModel
+Best ML tree saved to: /home/ha/Code/data/precompute/259/259_infer.raxml.bestTree
+Optimized model saved to: /home/ha/Code/data/precompute/259/259_infer.raxml.bestModel
 
-Execution log saved to: /raid/home/hatang/final_thesis/precompute/259/259_infer.raxml.log
+Execution log saved to: /home/ha/Code/data/precompute/259/259_infer.raxml.log
 
-Analysis started: 05-May-2026 10:13:04 / finished: 05-May-2026 10:13:04
+Analysis started: 16-May-2026 12:07:28 / finished: 16-May-2026 12:07:29
 
-Elapsed time: 0.144 seconds
+Elapsed time: 0.351 seconds
 

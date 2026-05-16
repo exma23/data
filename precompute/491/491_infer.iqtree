@@ -1,9 +1,9 @@
 IQ-TREE 3.1.1 built Apr  8 2026
 
-Input file name: /raid/home/hatang/final_thesis/data/dna/test/491/data.phy
-User tree file name: /raid/home/hatang/final_thesis/data/dna/test/491/start.newick
+Input file name: /home/ha/Code/data/dna/test/491/data.phy
+User tree file name: /home/ha/Code/data/dna/test/491/start.newick
 Type of analysis: tree reconstruction
-Random seed number: 557230
+Random seed number: 604247
 
 REFERENCES
 ----------
@@ -113,28 +113,28 @@ NOTE: Tree is UNROOTED although outgroup taxon 'T1' is drawn at root
 
 Tree in newick format:
 
-(T1:0.0488562595,((((T2:0.0654619005,(T8:0.0183933091,T15:0.0164617991):0.0042286413):0.0731158872,T6:0.0131641744):0.2167060216,((T5:0.0036692012,(T10:0.1829364766,(T11:0.0833751496,T13:0.0745768743):0.0217208759):0.2186381294):0.1025285440,((T7:0.0022672906,(T12:0.1246302553,T14:0.0509833583):0.2852699596):0.0199700974,T9:0.0118970834):0.0084743538):0.0978534269):0.0112908884,T4:0.0295947724):0.0483710086,T3:0.0021074032);
+(T1:0.0488562595,((((T2:0.0654619005,(T8:0.0183933091,T15:0.0164617991):0.0042286413):0.0731158872,T6:0.0131641744):0.2167060216,((T5:0.0036692012,(T10:0.1829366800,(T11:0.0833751496,T13:0.0745768743):0.0217206598):0.2186375707):0.1025285440,((T7:0.0022672906,(T12:0.1246302553,T14:0.0509833583):0.2852699596):0.0199700974,T9:0.0118970834):0.0084743538):0.0978534269):0.0112908884,T4:0.0295947724):0.0483710086,T3:0.0021074032);
 
 ALISIM COMMAND
 --------------
 To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
 
---alisim simulated_MSA -t precompute/491/491_infer.treefile -m "GTR{1.1161,1.1257,1.0359,1.1266,1.0398}+FU{0.2597,0.2716,0.2198,0.2489}+I{0.1052}+G4{1.403}" --length 3610
+--alisim simulated_MSA -t /home/ha/Code/data/precompute/491/491_infer.treefile -m "GTR{1.1161,1.1257,1.0359,1.1266,1.0398}+FU{0.2597,0.2716,0.2198,0.2489}+I{0.1052}+G4{1.403}" --length 3610
 
 To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
 
-iqtree -s /raid/home/hatang/final_thesis/data/dna/test/491/data.phy --alisim mimicked_MSA
+iqtree -s /home/ha/Code/data/dna/test/491/data.phy --alisim mimicked_MSA
 
 To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
 
-iqtree -s /raid/home/hatang/final_thesis/data/dna/test/491/data.phy --alisim mimicked_MSA --num-alignments 100
+iqtree -s /home/ha/Code/data/dna/test/491/data.phy --alisim mimicked_MSA --num-alignments 100
 
 For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 
 TIME STAMP
 ----------
 
-Date and time: Tue May  5 06:45:39 2026
-Total CPU time used: 1250.45 seconds (0h:20m:50s)
-Total wall-clock time used: 658.066 seconds (0h:10m:58s)
+Date and time: Sat May 16 12:14:21 2026
+Total CPU time used: 6.25754 seconds (0h:0m:6s)
+Total wall-clock time used: 6.29718 seconds (0h:0m:6s)
 

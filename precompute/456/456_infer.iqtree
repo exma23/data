@@ -1,9 +1,9 @@
 IQ-TREE 3.1.1 built Apr  8 2026
 
-Input file name: /raid/home/hatang/final_thesis/data/dna/test/456/data.phy
-User tree file name: /raid/home/hatang/final_thesis/data/dna/test/456/start.newick
+Input file name: /home/ha/Code/data/dna/test/456/data.phy
+User tree file name: /home/ha/Code/data/dna/test/456/start.newick
 Type of analysis: tree reconstruction
-Random seed number: 440179
+Random seed number: 429984
 
 REFERENCES
 ----------
@@ -119,22 +119,22 @@ ALISIM COMMAND
 --------------
 To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
 
---alisim simulated_MSA -t precompute/456/456_infer.treefile -m "GTR{0.9528,1.0583,0.9609,1.1216,1.0448}+FU{0.232377,0.212479,0.336066,0.219078}+I{9.68e-07}+G4{0.9803}" --length 5147
+--alisim simulated_MSA -t /home/ha/Code/data/precompute/456/456_infer.treefile -m "GTR{0.9528,1.0583,0.9609,1.1216,1.0448}+FU{0.232377,0.212479,0.336066,0.219078}+I{9.68e-07}+G4{0.9803}" --length 5147
 
 To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
 
-iqtree -s /raid/home/hatang/final_thesis/data/dna/test/456/data.phy --alisim mimicked_MSA
+iqtree -s /home/ha/Code/data/dna/test/456/data.phy --alisim mimicked_MSA
 
 To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
 
-iqtree -s /raid/home/hatang/final_thesis/data/dna/test/456/data.phy --alisim mimicked_MSA --num-alignments 100
+iqtree -s /home/ha/Code/data/dna/test/456/data.phy --alisim mimicked_MSA --num-alignments 100
 
 For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 
 TIME STAMP
 ----------
 
-Date and time: Tue May  5 11:17:30 2026
-Total CPU time used: 1871.45 seconds (0h:31m:11s)
-Total wall-clock time used: 803.198 seconds (0h:13m:23s)
+Date and time: Sat May 16 12:13:14 2026
+Total CPU time used: 9.86196 seconds (0h:0m:9s)
+Total wall-clock time used: 9.90332 seconds (0h:0m:9s)
 
