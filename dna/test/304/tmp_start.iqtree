@@ -2,7 +2,7 @@ IQ-TREE 3.1.1 built Apr  8 2026
 
 Input file name: /home/ha/Code/data/dna/test/304/data.phy
 Type of analysis: tree reconstruction
-Random seed number: 125278
+Random seed number: 681034
 
 REFERENCES
 ----------
@@ -68,64 +68,64 @@ Relative rates are computed as MEAN of the portion of the Gamma distribution fal
 STARTING TREE
 -------------
 
-Log-likelihood of the tree: -27457.3392 (s.e. 479.6987)
+Log-likelihood of the tree: -27303.0170 (s.e. 475.4691)
 Unconstrained log-likelihood (without tree): -17898.4257
 Number of free parameters (#branches + #model parameters): 37
-Akaike information criterion (AIC) score: 54988.6785
-Corrected Akaike information criterion (AICc) score: 54989.7559
-Bayesian information criterion (BIC) score: 55206.2962
+Akaike information criterion (AIC) score: 54680.0341
+Corrected Akaike information criterion (AICc) score: 54681.1115
+Bayesian information criterion (BIC) score: 54897.6518
 
-Total tree length (sum of branch lengths): 6.0342
-Sum of internal branch lengths: 0.4790 (7.9380% of tree length)
+Total tree length (sum of branch lengths): 5.6802
+Sum of internal branch lengths: 0.7126 (12.5460% of tree length)
 
-WARNING: 9 near-zero internal branches (<0.0004) should be treated with caution
+WARNING: 7 near-zero internal branches (<0.0004) should be treated with caution
          Such branches are denoted by '**' in the figure below
 
 NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
 
-+-----------T2
++----T2
 |
-|                        +--------------T19
-|                     +**|
-|                     |  +---------------------T14
-|                  +**|
-|                  |  +------------------------------------------T12
-|            +-----|
-|            |     +-----------------------------T16
-|  +---------|
-|  |         |  +-------------------------T10
-|  |         +--|
-|  |            +----------T6
-+**|
-|  |     +----------------T7
-|  |  +**|
-|  |  |  |               +---------------------------T4
-|  |  |  |            +--|
-|  |  |  |            |  +-----T13
-|  |  |  |     +------|
-|  |  |  |     |      +--T9
-|  |  |  |  +**|
-|  |  |  |  |  |  +----------------------------------------T18
-|  |  |  |  |  +**|
-|  |  |  |  |     |  +---------T15
-|  |  |  |  |     +**|
-|  |  |  |  |        |  +---T11
-|  |  |  |  |        +--|
-|  |  |  |  |           +--------------T20
-|  |  |  +--|
-|  |  |     |  +-------------------------T5
-|  |  |     +**|
-|  |  |        +--T8
+|     +------T19
 |  +**|
-|     |  +---------------------------T3
-|     +--|
-|        +----------T1
+|  |  |           +-------------T5
+|  |  |        +**|
+|  |  |        |  +---------------------T20
+|  |  +--------|
+|  |           +---------------------T16
++**|
+|  |      +--------------T4
+|  |   +**|
+|  |   |  |           +---------------T15
+|  |   |  |        +**|
+|  |   |  |        |  +----T17
+|  |   |  +--------|
+|  |   |           +--T9
+|  +---|
+|      |  +--------------------------------T12
+|      +**|
+|         |   +--T8
+|         +---|
+|             |  +-------------T13
+|             +--|
+|                +---T11
 |
-+--------------T17
+|     +---------T7
+|  +--|
+|  |  +-----------------T1
++**|
+   |       +---------------------T3
+   |  +----|
+   |  |    |     +---------------------------------------------T18
+   |  |    +-----|
+   |  |          +-----------------T14
+   +--|
+      |  +----------------------------------T10
+      +--|
+         +-----T6
 
 Tree in newick format:
 
-(T2:0.1914406856,(((((T19:0.2234086766,T14:0.3365575737):0.0000025141,T12:0.6402901509):0.0000022137,T16:0.4535152759):0.0993491000,(T10:0.3922624592,T6:0.1682512760):0.0011287472):0.1517643920,((T7:0.2551856906,((((T4:0.4238622751,T13:0.0898482227):0.0296982134,T9:0.0443723532):0.1057782293,(T18:0.6147496491,(T15:0.1542333503,(T11:0.0622973150,T20:0.2307188039):0.0175271894):0.0000020487):0.0000021119):0.0000024016,(T5:0.4010910811,T8:0.0432365208):0.0000024993):0.0452283445):0.0000026973,(T3:0.4259872817,T1:0.1728465384):0.0285026239):0.0000020613):0.0000029967,T17:0.2310711032);
+(T2:0.0842448676,((T19:0.1160145723,((T5:0.2235430428,T20:0.3430344699):0.0000024752,T16:0.3475245645):0.1482153719):0.0000023527,((T4:0.2310824310,((T15:0.2562362256,T17:0.0784962208):0.0000024517,T9:0.0514638400):0.1482062022):0.0000026725,(T12:0.5170037014,(T8:0.0329221570,(T13:0.2243488314,T11:0.0633489002):0.0151119841):0.0626903109):0.0000024997):0.0673298156):0.0000026230,((T7:0.1635165011,T1:0.2758953244):0.0212833469,((T3:0.3371814448,(T18:0.7093771547,T14:0.2782994422):0.0997949041):0.0855189222,(T10:0.5333404498,T6:0.1007115131):0.0453816886):0.0190932483):0.0000020109);
 
 ALISIM COMMAND
 --------------
@@ -146,7 +146,7 @@ For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 TIME STAMP
 ----------
 
-Date and time: Sun May 17 21:08:19 2026
-Total CPU time used: 0.123132 seconds (0h:0m:0s)
-Total wall-clock time used: 0.129532 seconds (0h:0m:0s)
+Date and time: Sun May 17 21:11:04 2026
+Total CPU time used: 0.100431 seconds (0h:0m:0s)
+Total wall-clock time used: 0.110962 seconds (0h:0m:0s)
 

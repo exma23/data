@@ -5,8 +5,8 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
 Command: iqtree3 -s /home/ha/Code/data/dna/test/108/data.phy -m GTR{1.0079,0.9615,0.9225,0.9612,1.0160}+F{0.3337,0.1796,0.229,0.2576}+I{9.995e-07}+G4{1.101} -t RANDOM --tree-fix -T 1 --prefix /home/ha/Code/data/dna/test/108/tmp_start --redo
-Seed:    129394 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Sun May 17 21:08:17 2026
+Seed:    352279 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun May 17 21:11:02 2026
 Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
 HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
@@ -14,12 +14,12 @@ HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading alignment file /home/ha/Code/data/dna/test/108/data.phy ... Phylip format detected
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.00226488 secs using 87.64% CPU
+Constructing alignment: done in 0.00404173 secs using 34.34% CPU
 WARNING: 5 sites contain only gaps or ambiguous characters.
 Alignment has 7 sequences with 4462 columns, 1164 distinct patterns
 1028 parsimony-informative, 1059 singleton sites, 2375 constant sites
     Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 1.7368e-05 secs using 80.61% CPU
+Analyzing sequences: done in 3.3833e-05 secs
    1  T2   20.33%    passed     46.37%
    2  T3   21.31%    passed     71.18%
    3  T7   19.30%    passed     98.14%
@@ -28,7 +28,7 @@ Analyzing sequences: done in 1.7368e-05 secs using 80.61% CPU
    6  T1   10.40%    passed     91.90%
    7  T5   10.17%    passed     96.43%
 ****  TOTAL   16.27%  0 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 2.6817e-05 secs using 82.04% CPU
+Checking for duplicate sequences: done in 5.1976e-05 secs
 
 Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
 WARNING: Normalizing State frequencies so that sum of them equals to 1
@@ -43,21 +43,21 @@ Rate parameters:  A-C: 1.00790  A-G: 0.96150  A-T: 0.92250  C-G: 0.96120  C-T: 1
 Base frequencies:  A: 0.334  C: 0.180  G: 0.229  T: 0.258
 Proportion of invariable sites: 0.000
 Gamma shape alpha: 1.101
-Parameters optimization took 3 rounds (0.009 sec)
-Log-likelihood of random tree: -21216.035
+Parameters optimization took 3 rounds (0.005 sec)
+Log-likelihood of random tree: -21130.488
 Wrote distance file to... 
-BEST SCORE FOUND : -21216.035
-Total tree length: 1.588
+BEST SCORE FOUND : -21130.488
+Total tree length: 1.540
 
 Total number of iterations: 0
 CPU time used for tree search: 0.000 sec (0h:0m:0s)
 Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
-Total CPU time used: 0.018 sec (0h:0m:0s)
-Total wall-clock time used: 0.019 sec (0h:0m:0s)
+Total CPU time used: 0.012 sec (0h:0m:0s)
+Total wall-clock time used: 0.013 sec (0h:0m:0s)
 
 Analysis results written to: 
   IQ-TREE report:                /home/ha/Code/data/dna/test/108/tmp_start.iqtree
   Maximum-likelihood tree:       /home/ha/Code/data/dna/test/108/tmp_start.treefile
   Screen log file:               /home/ha/Code/data/dna/test/108/tmp_start.log
 
-Date and Time: Sun May 17 21:08:17 2026
+Date and Time: Sun May 17 21:11:02 2026

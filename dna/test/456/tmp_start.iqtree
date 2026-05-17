@@ -2,7 +2,7 @@ IQ-TREE 3.1.1 built Apr  8 2026
 
 Input file name: /home/ha/Code/data/dna/test/456/data.phy
 Type of analysis: tree reconstruction
-Random seed number: 324473
+Random seed number: 777641
 
 REFERENCES
 ----------
@@ -68,54 +68,54 @@ Relative rates are computed as MEAN of the portion of the Gamma distribution fal
 STARTING TREE
 -------------
 
-Log-likelihood of the tree: -42109.0071 (s.e. 478.6152)
+Log-likelihood of the tree: -42263.7197 (s.e. 485.3761)
 Unconstrained log-likelihood (without tree): -37070.6325
 Number of free parameters (#branches + #model parameters): 27
-Akaike information criterion (AIC) score: 84272.0142
-Corrected Akaike information criterion (AICc) score: 84272.3096
-Bayesian information criterion (BIC) score: 84448.7608
+Akaike information criterion (AIC) score: 84581.4394
+Corrected Akaike information criterion (AICc) score: 84581.7348
+Bayesian information criterion (BIC) score: 84758.1860
 
-Total tree length (sum of branch lengths): 3.8964
-Sum of internal branch lengths: 0.3666 (9.4094% of tree length)
+Total tree length (sum of branch lengths): 3.8076
+Sum of internal branch lengths: 0.1352 (3.5508% of tree length)
 
-WARNING: 7 near-zero internal branches (<0.0002) should be treated with caution
+WARNING: 6 near-zero internal branches (<0.0002) should be treated with caution
          Such branches are denoted by '**' in the figure below
 
 NOTE: Tree is UNROOTED although outgroup taxon 'T1' is drawn at root
 
-+-------T1
++------T1
 |
-|         +-----------------------T2
-|     +---|
-|     |   |              +----------------T6
-|     |   +--------------|
-|     |                  +--------------------------------------T9
-|  +**|
-|  |  |     +------------------------T12
-|  |  |  +**|
-|  |  |  |  +--T8
-|  |  +--|
-|  |     |     +-------------T7
-|  |     |  +**|
-|  |     |  |  |  +----------------------------T10
-|  |     |  |  +**|
-|  |     |  |     +---T5
-|  |     +**|
-|  |        |  +---------------------------T15
-|  |        +--|
-|  |           +------T14
+|              +-----------------------T2
+|           +**|
+|           |  +----------T14
+|        +**|
+|        |  +-------------------------T13
+|     +**|
+|     |  |   +---------------T12
+|     |  +---|
+|     |      |  +------T7
+|     |      +**|
+|     |         +-------------------------------T6
+|  +--|
+|  |  |      +----------------------T11
+|  |  |   +--|
+|  |  |   |  +--------------------T15
+|  |  +---|
+|  |      |  +------------------------T4
+|  |      +**|
+|  |         +---------T5
 +**|
-|  |   +------------------T11
-|  +---|
-|      +----------------------------T4
-|
 |  +--T3
-+**|
-   +-------------------------------T13
+|
+|  +--------------------------------T10
++--|
+   |  +--------------------------------------------------------T9
+   +--|
+      +----T8
 
 Tree in newick format:
 
-(T1:0.1037347152,(((T2:0.3059777631,(T6:0.2130471187,T9:0.4835663704):0.1937414582):0.0598238126,((T12:0.3104039516,T8:0.0385944557):0.0000028394,((T7:0.1750660440,(T10:0.3591295220,T5:0.0596941638):0.0000027241):0.0000022181,(T15:0.3458183815,T14:0.0956260129):0.0125585581):0.0000024949):0.0412270506):0.0000021182,(T11:0.2434406046,T4:0.3573675099):0.0592594159):0.0000024192,(T3:0.0356686903,T13:0.4026245535):0.0000024192);
+(T1:0.0942388883,(((((T2:0.2881193390,T14:0.1416881719):0.0000024388,T13:0.3136830462):0.0000028910,(T12:0.1923861142,(T7:0.0876536897,T6:0.3920728650):0.0000027113):0.0514877127):0.0000026348,((T11:0.2779407980,T15:0.2587731759):0.0018406462,(T4:0.2991852156,T5:0.1275517912):0.0000025204):0.0563723283):0.0011254787,T3:0.0447922439):0.0000022017,(T10:0.3964046125,(T9:0.6912819673,T8:0.0666652385):0.0033740163):0.0209874016);
 
 ALISIM COMMAND
 --------------
@@ -136,7 +136,7 @@ For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 TIME STAMP
 ----------
 
-Date and time: Sun May 17 21:08:23 2026
-Total CPU time used: 0.115562 seconds (0h:0m:0s)
-Total wall-clock time used: 0.12898 seconds (0h:0m:0s)
+Date and time: Sun May 17 21:11:08 2026
+Total CPU time used: 0.075133 seconds (0h:0m:0s)
+Total wall-clock time used: 0.0883695 seconds (0h:0m:0s)
 

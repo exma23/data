@@ -5,8 +5,8 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
 Command: iqtree3 -s /home/ha/Code/data/dna/test/164/data.phy -m GTR{1.1916,0.9502,0.7319,0.8951,0.8935}+F{0.2621,0.1789,0.2137,0.3453}+I{9.386e-07}+G4{0.9346} -t RANDOM --tree-fix -T 1 --prefix /home/ha/Code/data/dna/test/164/tmp_start --redo
-Seed:    541329 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Sun May 17 21:08:17 2026
+Seed:    874058 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun May 17 21:11:02 2026
 Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
 HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
@@ -14,11 +14,11 @@ HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading alignment file /home/ha/Code/data/dna/test/164/data.phy ... Phylip format detected
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.000936813 secs using 46.01% CPU
+Constructing alignment: done in 0.000676633 secs using 10.05% CPU
 Alignment has 12 sequences with 606 columns, 360 distinct patterns
 180 parsimony-informative, 110 singleton sites, 316 constant sites
      Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 2.908e-05 secs
+Analyzing sequences: done in 1.787e-05 secs
    1  T2    17.66%    passed     50.58%
    2  T12   16.83%    passed     70.31%
    3  T3    26.24%    passed     64.65%
@@ -32,7 +32,7 @@ Analyzing sequences: done in 2.908e-05 secs
   11  T6    24.59%    passed     76.27%
   12  T9    15.18%    passed     88.65%
 ****  TOTAL   25.29%  0 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 5.9611e-05 secs
+Checking for duplicate sequences: done in 3.8685e-05 secs
 
 Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
 
@@ -47,20 +47,20 @@ Base frequencies:  A: 0.262  C: 0.179  G: 0.214  T: 0.345
 Proportion of invariable sites: 0.000
 Gamma shape alpha: 0.935
 Parameters optimization took 3 rounds (0.006 sec)
-Log-likelihood of random tree: -3718.711
+Log-likelihood of random tree: -3879.022
 Wrote distance file to... 
-BEST SCORE FOUND : -3718.711
-Total tree length: 1.909
+BEST SCORE FOUND : -3879.022
+Total tree length: 2.374
 
 Total number of iterations: 0
 CPU time used for tree search: 0.000 sec (0h:0m:0s)
 Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
-Total CPU time used: 0.018 sec (0h:0m:0s)
-Total wall-clock time used: 0.020 sec (0h:0m:0s)
+Total CPU time used: 0.017 sec (0h:0m:0s)
+Total wall-clock time used: 0.017 sec (0h:0m:0s)
 
 Analysis results written to: 
   IQ-TREE report:                /home/ha/Code/data/dna/test/164/tmp_start.iqtree
   Maximum-likelihood tree:       /home/ha/Code/data/dna/test/164/tmp_start.treefile
   Screen log file:               /home/ha/Code/data/dna/test/164/tmp_start.log
 
-Date and Time: Sun May 17 21:08:17 2026
+Date and Time: Sun May 17 21:11:02 2026

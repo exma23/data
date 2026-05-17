@@ -2,7 +2,7 @@ IQ-TREE 3.1.1 built Apr  8 2026
 
 Input file name: /home/ha/Code/data/dna/test/103/data.phy
 Type of analysis: tree reconstruction
-Random seed number: 61081
+Random seed number: 278000
 
 REFERENCES
 ----------
@@ -68,15 +68,15 @@ Relative rates are computed as MEAN of the portion of the Gamma distribution fal
 STARTING TREE
 -------------
 
-Log-likelihood of the tree: -15219.9420 (s.e. 187.7946)
+Log-likelihood of the tree: -15207.4564 (s.e. 188.6899)
 Unconstrained log-likelihood (without tree): -17377.9264
 Number of free parameters (#branches + #model parameters): 11
-Akaike information criterion (AIC) score: 30461.8839
-Corrected Akaike information criterion (AICc) score: 30461.9464
-Bayesian information criterion (BIC) score: 30531.7620
+Akaike information criterion (AIC) score: 30436.9127
+Corrected Akaike information criterion (AICc) score: 30436.9752
+Bayesian information criterion (BIC) score: 30506.7908
 
-Total tree length (sum of branch lengths): 0.6730
-Sum of internal branch lengths: 0.0152 (2.2544% of tree length)
+Total tree length (sum of branch lengths): 0.6419
+Sum of internal branch lengths: 0.0119 (1.8541% of tree length)
 
 WARNING: 2 near-zero internal branches (<0.0002) should be treated with caution
          Such branches are denoted by '**' in the figure below
@@ -85,21 +85,21 @@ NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
 
 +----------------T2
 |
-|     +---------T4
-|  +--|
-|  |  |  +--T5
+|     +-------------T4
+|  +**|
+|  |  |  +-------------------------------------------------------T7
 |  |  +**|
-|  |     +--------------------------------------------------------T7
-+**|
-|  |  +----------------------------T3
+|  |     +---------------------------------T6
++--|
+|  |  +-------------------------------T3
 |  +--|
-|     +--------------------------------------T1
+|     +------------------------------------------T1
 |
-+----------------------------------T6
++--T5
 
 Tree in newick format:
 
-(T2:0.0591750490,((T4:0.0368574624,(T5:0.0078861698,T7:0.1962734407):0.0000020390):0.0093585949,(T3:0.1009763117,T1:0.1345121684):0.0058095290):0.0000027353,T6:0.1221801040);
+(T2:0.0560109273,((T4:0.0462273142,(T7:0.1755580665,T6:0.1066088056):0.0000020191):0.0000029623,(T3:0.1007609854,T1:0.1341292919):0.0005205419):0.0113763696,T5:0.0107366255);
 
 ALISIM COMMAND
 --------------
@@ -120,7 +120,7 @@ For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 TIME STAMP
 ----------
 
-Date and time: Sun May 17 21:08:17 2026
-Total CPU time used: 0.017018 seconds (0h:0m:0s)
-Total wall-clock time used: 0.0175367 seconds (0h:0m:0s)
+Date and time: Sun May 17 21:11:02 2026
+Total CPU time used: 0.013287 seconds (0h:0m:0s)
+Total wall-clock time used: 0.0145393 seconds (0h:0m:0s)
 

@@ -5,8 +5,8 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
 Command: iqtree3 -s /home/ha/Code/data/dna/test/490/data.phy -m GTR{0.8823,0.9589,0.9862,1.0049,1.0109}+F{0.321,0.1936,0.2499,0.2356}+I{0.0357}+G4{1.108} -t RANDOM --tree-fix -T 1 --prefix /home/ha/Code/data/dna/test/490/tmp_start --redo
-Seed:    223333 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Sun May 17 21:08:24 2026
+Seed:    648081 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun May 17 21:11:09 2026
 Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
 HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
@@ -14,12 +14,12 @@ HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading alignment file /home/ha/Code/data/dna/test/490/data.phy ... Phylip format detected
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.00374609 secs using 67.59% CPU
+Constructing alignment: done in 0.00351811 secs using 53.78% CPU
 WARNING: 59 sites contain only gaps or ambiguous characters.
 Alignment has 15 sequences with 4007 columns, 2580 distinct patterns
 1730 parsimony-informative, 598 singleton sites, 1679 constant sites
      Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 9.2665e-05 secs using 61.51% CPU
+Analyzing sequences: done in 0.000134943 secs using 99.3% CPU
    1  T1    29.77%    passed     79.41%
    2  T2    35.26%    passed     72.27%
    3  T12   39.96%    passed     95.93%
@@ -36,9 +36,9 @@ Analyzing sequences: done in 9.2665e-05 secs using 61.51% CPU
   14  T9    28.87%    passed     73.87%
   15  T8    30.92%    passed     15.73%
 ****  TOTAL   33.91%  0 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 0.000155281 secs using 61.18% CPU
+Checking for duplicate sequences: done in 0.000205227 secs using 99.89% CPU
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.008 seconds
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
 WARNING: Normalizing State frequencies so that sum of them equals to 1
 
 NOTE: 5 MB RAM (0 GB) is required!
@@ -51,21 +51,21 @@ Rate parameters:  A-C: 0.88230  A-G: 0.95890  A-T: 0.98620  C-G: 1.00490  C-T: 1
 Base frequencies:  A: 0.321  C: 0.194  G: 0.250  T: 0.236
 Proportion of invariable sites: 0.036
 Gamma shape alpha: 1.108
-Parameters optimization took 3 rounds (0.095 sec)
-Log-likelihood of random tree: -34436.726
+Parameters optimization took 3 rounds (0.071 sec)
+Log-likelihood of random tree: -32113.111
 Wrote distance file to... 
-BEST SCORE FOUND : -34436.726
-Total tree length: 4.569
+BEST SCORE FOUND : -32113.111
+Total tree length: 3.668
 
 Total number of iterations: 0
 CPU time used for tree search: 0.000 sec (0h:0m:0s)
 Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
-Total CPU time used: 0.131 sec (0h:0m:0s)
-Total wall-clock time used: 0.137 sec (0h:0m:0s)
+Total CPU time used: 0.102 sec (0h:0m:0s)
+Total wall-clock time used: 0.104 sec (0h:0m:0s)
 
 Analysis results written to: 
   IQ-TREE report:                /home/ha/Code/data/dna/test/490/tmp_start.iqtree
   Maximum-likelihood tree:       /home/ha/Code/data/dna/test/490/tmp_start.treefile
   Screen log file:               /home/ha/Code/data/dna/test/490/tmp_start.log
 
-Date and Time: Sun May 17 21:08:24 2026
+Date and Time: Sun May 17 21:11:09 2026
