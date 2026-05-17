@@ -1,8 +1,8 @@
 IQ-TREE 3.1.1 built Apr  8 2026
 
-Input file name: data_forth/dna/train/40/data.phy
+Input file name: /home/ha/Code/data/dna/test/421/data.phy
 Type of analysis: tree reconstruction
-Random seed number: 99234
+Random seed number: 999307
 
 REFERENCES
 ----------
@@ -28,7 +28,7 @@ Number of distinct site patterns: 4201
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: GTR+F+I+G4
+Model of substitution: GTR+FU+I+G4
 
 Rate parameter R:
 
@@ -39,7 +39,7 @@ Rate parameter R:
   C-T: 1.0309
   G-T: 1.0000
 
-State frequencies: (empirical counts from alignment)
+State frequencies: (user-defined)
 
   pi(A) = 0.303
   pi(C) = 0.2654
@@ -48,10 +48,10 @@ State frequencies: (empirical counts from alignment)
 
 Rate matrix Q:
 
-  A   -0.9386    0.3711    0.2453    0.3222
-  C    0.4238    -1.013    0.2451     0.344
-  G    0.4187    0.3663    -1.119    0.3337
-  T    0.3842    0.3593    0.2332   -0.9768
+  A   -0.9387    0.3712    0.2453    0.3222
+  C    0.4237    -1.013     0.245    0.3441
+  G    0.4187    0.3663    -1.119    0.3338
+  T    0.3842    0.3594    0.2331   -0.9767
 
 Model of rate heterogeneity: Invar+Gamma with 4 categories
 Proportion of invariable sites: 0.04786
@@ -65,85 +65,88 @@ Gamma shape alpha: 1.26
   4         2.351          0.238
 Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
 
-MAXIMUM LIKELIHOOD TREE
------------------------
+STARTING TREE
+-------------
 
-Log-likelihood of the tree: -54083.8087 (s.e. 556.4739)
+Log-likelihood of the tree: -70277.5374 (s.e. 727.1215)
 Unconstrained log-likelihood (without tree): -53731.1368
-Number of free parameters (#branches + #model parameters): 47
-Akaike information criterion (AIC) score: 108261.6174
-Corrected Akaike information criterion (AICc) score: 108262.2596
-Bayesian information criterion (BIC) score: 108584.2339
+Number of free parameters (#branches + #model parameters): 37
+Akaike information criterion (AIC) score: 140629.0747
+Corrected Akaike information criterion (AICc) score: 140629.4744
+Bayesian information criterion (BIC) score: 140883.0494
 
-Total tree length (sum of branch lengths): 3.6618
-Sum of internal branch lengths: 2.5736 (70.2825% of tree length)
+Total tree length (sum of branch lengths): 5.7907
+Sum of internal branch lengths: 1.6485 (28.4671% of tree length)
+
+WARNING: 7 near-zero internal branches (<0.0001) should be treated with caution
+         Such branches are denoted by '**' in the figure below
 
 NOTE: Tree is UNROOTED although outgroup taxon 'T2' is drawn at root
 
-+--T2
++--------T2
 |
-|                         +--T9
-|                    +----|
-|                    |    |                   +----T16
-|                    |    +-------------------|
-|                    |                        +--T17
-+--------------------|
-|                    +--T14
+|                          +--T9
+|                       +**|
+|                       |  |                      +-----------------------T16
+|                       |  |                   +--|
+|                       |  |                   |  +--T11
+|                       |  |                +--|
+|                       |  |                |  |  +---T10
+|                       |  |                |  +--|
+|                       |  |                |     +----------T1
+|                       |  |             +**|
+|                       |  |             |  +-------------T13
+|                       |  +-------------|
+|                       |                |  +------------------------T17
+|                       |                +**|
+|                       |                   |  +---------T12
+|                       |                   +**|
+|                       |                      |  +---T18
+|                       |                      +**|
+|                       |                         +--T6
+|             +---------|
+|             |         +--T14
+|          +**|
+|          |  +---T5
+|  +-------|
+|  |       |  +----T7
+|  |       +--|
+|  |          |             +--------------------T4
+|  |          +-------------|
+|  |                        |          +--T15
+|  |                        +----------|
+|  |                                   +--T20
++**|
+|  +-----T8
 |
-|                  +--T5
-|            +-----|
-|            |     +--T13
-|  +---------|
-|  |         +----T7
+|  +--T3
 +--|
-   |                                         +------------T4
-   |                         +---------------|
-   |                         |               +--T12
-   |                  +------|
-   |                  |      |  +--T10
-   |                  |      +--|
-   |                  |         |                    +---T15
-   |                  |         |  +-----------------|
-   |                  |         |  |                 +--T20
-   |                  |         +--|
-   |                  |            +--T18
-   |              +---|
-   |              |   |  +--T6
-   |              |   +--|
-   |              |      |  +--T8
-   |              |      +--|
-   |              |         +--T11
-   +--------------|
-                  |  +--T3
-                  +--|
-                     |       +-------T1
-                     +-------|
-                             +--T19
+   +----T19
 
 Tree in newick format:
 
-(T2:0.0495154293,((T9:0.0614343695,(T16:0.0884513852,T17:0.0577354748):0.3642841966):0.0915180139,T14:0.0113536161):0.3715959218,(((T5:0.0078657455,T13:0.0291370261):0.1060084003,T7:0.0899628640):0.1777068112,((((T4:0.2287777176,T12:0.0123376796):0.2961942891,(T10:0.0279621374,((T15:0.0851304438,T20:0.0375186064):0.3211198366,T18:0.0021720945):0.0294702507):0.0330113408):0.1384870566,(T6:0.0380947620,(T8:0.0487135295,T11:0.0244027837):0.0165277967):0.0486737658):0.0856240359,(T3:0.0248392822,(T1:0.1577845628,T19:0.0050192547):0.1496502703):0.0393467280):0.2767253207):0.0276873648);
+(T2:0.2369728604,(((((T9:0.0946058415,((((T16:0.6097276075,T11:0.0655409286):0.0037205833,(T10:0.1168611387,T1:0.2956932100):0.0153610196):0.0425544874,T13:0.3699220280):0.0000026944,(T17:0.6305929376,(T12:0.2605655699,(T18:0.1176478569,T6:0.0732755833):0.0000027867):0.0000020518):0.0000028887):0.3616842977):0.0000021652,T14:0.0553911638):0.2621399483,T5:0.1220441751):0.0000020797,(T7:0.1416945220,(T4:0.5297582126,(T15:0.0735152781,T20:0.0285594875):0.2864487890):0.3713166418):0.0142511123):0.2111297592,T8:0.1601855152):0.0000028052,(T3:0.0352444593,T19:0.1244710681):0.0798269944);
 
 ALISIM COMMAND
 --------------
 To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
 
---alisim simulated_MSA -t data_forth/dna/train/40/tmp_start.treefile -m "GTR{1.06475,1.05206,0.965356,1.0509,1.03093}+F{0.303014,0.265366,0.177543,0.254077}+I{0.0478627}+G4{1.25983}" --length 7074
+--alisim simulated_MSA -t /home/ha/Code/data/dna/test/421/tmp_start.treefile -m "GTR{1.0647,1.0521,0.9654,1.0509,1.0309}+FU{0.303,0.2654,0.1775,0.2541}+I{0.04786}+G4{1.26}" --length 7074
 
 To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
 
-iqtree -s data_forth/dna/train/40/data.phy --alisim mimicked_MSA
+iqtree -s /home/ha/Code/data/dna/test/421/data.phy --alisim mimicked_MSA
 
 To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
 
-iqtree -s data_forth/dna/train/40/data.phy --alisim mimicked_MSA --num-alignments 100
+iqtree -s /home/ha/Code/data/dna/test/421/data.phy --alisim mimicked_MSA --num-alignments 100
 
 For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
 
 TIME STAMP
 ----------
 
-Date and time: Sun May  3 21:11:20 2026
-Total CPU time used: 878.244 seconds (0h:14m:38s)
-Total wall-clock time used: 28.4662 seconds (0h:0m:28s)
+Date and time: Sun May 17 21:08:22 2026
+Total CPU time used: 0.194718 seconds (0h:0m:0s)
+Total wall-clock time used: 0.210127 seconds (0h:0m:0s)
 

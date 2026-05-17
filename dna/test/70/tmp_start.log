@@ -1,0 +1,62 @@
+IQ-TREE version 3.1.1 for Linux x86 64-bit built Apr  8 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    ha-ThinkPad-E14-Gen-5 (AVX2, FMA3, 31 GB RAM)
+Command: iqtree3 -s /home/ha/Code/data/dna/test/70/data.phy -m GTR{1.2061,1.1269,1.0509,1.1363,1.0925}+F{0.235,0.2599,0.314,0.1911}+I{9.918e-07}+G4{0.93} -t RANDOM --tree-fix -T 1 --prefix /home/ha/Code/data/dna/test/70/tmp_start --redo
+Seed:    928298 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun May 17 21:08:16 2026
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file /home/ha/Code/data/dna/test/70/data.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00226983 secs
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 7 sequences with 2200 columns, 681 distinct patterns
+511 parsimony-informative, 423 singleton sites, 1266 constant sites
+    Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.7361e-05 secs
+   1  T2   15.09%    passed     97.27%
+   2  T3   16.23%    passed     98.59%
+   3  T5   18.45%    passed     99.39%
+   4  T6   15.86%    passed     94.55%
+   5  T1   16.27%    passed     71.12%
+   6  T4   10.55%    passed     86.03%
+   7  T7    9.18%    passed     87.13%
+****  TOTAL   14.52%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 3.991e-05 secs
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -9121.408
+2. Current log-likelihood: -9076.895
+3. Current log-likelihood: -9076.799
+Optimal log-likelihood: -9076.799
+Rate parameters:  A-C: 1.20610  A-G: 1.12690  A-T: 1.05090  C-G: 1.13630  C-T: 1.09250  G-T: 1.00000
+Base frequencies:  A: 0.235  C: 0.260  G: 0.314  T: 0.191
+Proportion of invariable sites: 0.000
+Gamma shape alpha: 0.930
+Parameters optimization took 3 rounds (0.007 sec)
+Log-likelihood of random tree: -10016.208
+Wrote distance file to... 
+BEST SCORE FOUND : -10016.208
+Total tree length: 1.318
+
+Total number of iterations: 0
+CPU time used for tree search: 0.000 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
+Total CPU time used: 0.021 sec (0h:0m:0s)
+Total wall-clock time used: 0.024 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                /home/ha/Code/data/dna/test/70/tmp_start.iqtree
+  Maximum-likelihood tree:       /home/ha/Code/data/dna/test/70/tmp_start.treefile
+  Screen log file:               /home/ha/Code/data/dna/test/70/tmp_start.log
+
+Date and Time: Sun May 17 21:08:16 2026
